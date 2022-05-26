@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/kozukaccd/kt-training/issues"
   },
-  "homepage": "https://github.com/kozukaccd/kt-training#readme"
+  "homepage": "https://github.com/kozukaccd/kt-training#readme",
+  "dependencies": {
+    "prettier": "^2.6.2"
+  }
 }

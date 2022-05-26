@@ -22,18 +22,20 @@ yyyymmdd の書式のフォルダの中にその日に使うファイルが格�
 
 1. 解答前に、現在の main ブランチの最新をプロジェクトに取り込みます。プロジェクトのルートに`cd`して、以下のコマンドを実行してください
 
-   `git checkout main`
+   `git checkout main`　//main ブランチに切り替え（チェックアウト）
 
-   `git pull`
+   `git pull` //リモート上にある main ブランチの情報を取得し反映
 
 2. 解答用のブランチを切ります。以下のコマンドを実行してください
 
-   `git branch -b 2022mmdd-answer`
+   `git checkout -b 2022mmdd-answer` //現在いるブランチをベースに 2022mmdd-answer というブランチを作成し、チェックアウト
 
 3. 解答が終わったら以下を実行してください
 
-   `git add -A`
+   `git add -A` //現在の変更点全てをステージする
 
-   `git commit -m "[任意のコミットメッセージを入力する]"`
+   `git commit -m "[任意のコミットメッセージを入力する]"` //ステージした変更点をメッセージ付きでコミットする
 
-   `git push origin 2022mmdd-answer`
+   `git push origin 2022mmdd-answer` //origin(リモート)へ、2022mmdd-answer というブランチを転送（プッシュ）する
+
+以上で解答の提出が完了となります。
