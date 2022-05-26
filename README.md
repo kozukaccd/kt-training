@@ -12,7 +12,7 @@ yyyymmdd の書式のフォルダの中にその日に使うファイルが格�
 
    `git clone https://github.com/kozukaccd/kt-training.git`
 
-   `git@github.com:kozukaccd/kt-training.git`
+   `git clone git@github.com:kozukaccd/kt-training.git`
 
 2. 以下を実行してください
 
