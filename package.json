@@ -1,0 +1,19 @@
+{
+  "name": "kt-training",
+  "version": "1.0.0",
+  "description": "KT 用の js 講習リポジトリです",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kozukaccd/kt-training.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kozukaccd/kt-training/issues"
+  },
+  "homepage": "https://github.com/kozukaccd/kt-training#readme"
+}
