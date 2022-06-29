@@ -42,20 +42,20 @@ tanda(1);
 // 15 の倍数のときは数字の代わりに FizzBuzz と表示すること
 
 
-const kaxitanda = (kaito)=>{
-    if(kaito%15===0){
+const fizzbuzz = (int)=>{
+    if(int%15===0){
         console.log("FizzBuzz");
             }
-            else if(kaito%5===0){
+            else if(int%5===0){
                 console.log("Buzz");
                     }
-                   else if(kaito%3===0){
+                   else if(int%3===0){
                         console.log("Fizz");
                             }
-                            else console.log(kaito);
+                            else console.log(int);
 }
 for(i=1;i<=100;i++){
-    kaxitanda(i);
+    fizzbuzz(i);
 }
 
 // 13. 12 で作成したプログラムを以下の仕様で拡張し、"customFizzBuzz"という名称の関数として定義して、任意の引数の値で一度実行せよ。
