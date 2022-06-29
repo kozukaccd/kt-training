@@ -1,6 +1,7 @@
-## 概要 //aiu 123
+## 概要
 
 KT 用の js 講習リポジトリです
+https://github.com/kozukaccd/kt-training
 
 ## 使い方
 

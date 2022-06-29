@@ -46,3 +46,13 @@ for (let i = 0; i < functionArray.length; i++) {
 //hoge
 //hoge,
 //0
+
+if (i % fizz === 0 && i % buzz === 0) {
+  // 任意の処理
+} else if (i % fizz === 0) {
+  // 任意の処理
+} else if (i % buzz === 0) {
+  // 任意の処理
+} else {
+  // 任意の処理
+}
