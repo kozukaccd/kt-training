@@ -1,3 +1,46 @@
+// - var let const の違いを見てもらう
+// - 関数の扱い
+
+if (true) {
+  var test = "hello world";
+
+  let test2 = "aaaa";
+  const test3 = "shit";
+}
+
+console.log(test);
+// console.log(test2); //エラー
+// console.log(test3); //エラー
+
+//   - return 文の使い方。返り値とはなんぞやを理解する
+
+const testFunction = (a, b) => {
+  return a + b;
+};
+
+//   - if を用いた早期 return
+//   - 関数を引数に渡す、という考え方を理解する
+
+const doFunction = (a) => {
+  return a + 1;
+};
+
+console.log(doFunction(testFunction(10, 9)));
+
+//   - 関数を return するという概念を理解する
+
+const aui = (number) => {
+  console.log(number + 1);
+  if (number < 10) {
+    return aui(number + 1);
+  } else {
+    console.log("おわり");
+  }
+};
+aui(1);
+
+//   - 【練習問題】数値を引数として与えると、その数だけフィボナッチ数列（1,1,2,3,5,8,13,21,34,55...）を表示するプログラムを作成する
+
 // 講義用練習問題
 
 // 1. 数値2つを入力として受け取り、それらの和をreturnする関数calcTwoNumbersSumを定義せよ。
@@ -16,6 +59,22 @@
 // n番目のフィボナッチ数 fib(n)
 // n-1番目のフィボナッチ数 fib(n-1)
 // n-2番目のフィボナッチ数 fib(n-2)
+
+const fib = (n) => {
+  if (n < 2) {
+    return n;
+  }
+  return fib(n - 1) + fib(n - 2);
+};
+
+// オブジェクトの中にプロパティ付きで関数を持たせる例
+const message = "sukidayo";
+const testObj = {
+  aaa: fib,
+  quest: message,
+};
+console.log(testObj.quest);
+console.log(testObj.aaa(10));
 
 //==========================================================================================
 // 以下予習用ワーク
@@ -46,13 +105,3 @@ for (let i = 0; i < functionArray.length; i++) {
 //hoge
 //hoge,
 //0
-
-if (i % fizz === 0 && i % buzz === 0) {
-  // 任意の処理
-} else if (i % fizz === 0) {
-  // 任意の処理
-} else if (i % buzz === 0) {
-  // 任意の処理
-} else {
-  // 任意の処理
-}
