@@ -1,4 +1,4 @@
-// - var let const の違いを見てもらう
+/* // - var let const の違いを見てもらう
 // - 関数の扱い
 
 if (true) {
@@ -75,26 +75,44 @@ const testObj = {
 };
 console.log(testObj.quest);
 console.log(testObj.aaa(10));
-
+ */
 //==========================================================================================
 // 以下予習用ワーク
 
 // - 配列[0,1,2,3,4]を好きな変数名に格納し、3 番目の値を console.log で表示せよ
-
+const count = [0,1,2,3,4];
+console.log(count[2]);
 // - 以下の要件を満たす、ひとつの数値を引数として受け取る関数`fn`(ただし、n は番号を示す。f0,f1,f2...)を定義しろ
 
 //   0. 入力された数値に 3 を足した数を表示する
+const f0 = (number0) =>{
+  return number0+3;
+}
 //   1. 入力された数値を 4 個並べて表示する（6 が入力されたら"6666"と表示する）
+const f1 = (number1) =>{
+  return `${number1}${number1}${number1}${number1}`;
+}
 //   2. 入力された数値を 10 倍にして表示する
+const f2 = (number2) =>{
+  return number2*10;
+}
 //   3. 入力された数値の回数だけ`hoge`と表示する
+const f3 = (number3) =>{
+  for(i=0;i<number3;i++){
+    return "hoge";
+  }
+}
 //   4. 入力された数値にかかわらず 0 を表示する
-
+const f4 = (number4) =>{
+  return 0;
+}
 // -`functionArray` という名前の配列にf0～f4の関数を格納せよ
 // - for文を用いて、functionArrayに格納されたf0からf4までの関数を順に実行せよ。ただし各関数に渡す引数は添字のiとする。
 //　また、for文は以下のものを使用せよ。
+const functionArray = [f0,f1,f2,f3,f4];
 
 for (let i = 0; i < functionArray.length; i++) {
-  //functionArrayの要素数だけfor文の中を繰り返す。iは0から4まで。
+  console.log(functionArray[i](i));
 }
 
 // 実行結果が以下のようになればOK
