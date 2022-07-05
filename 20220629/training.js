@@ -86,25 +86,25 @@ console.log(count[2]);
 
 //   0. 入力された数値に 3 を足した数を表示する
 const f0 = (number0) =>{
-  console.log(number0+3);
+  return number0+3;
 }
 //   1. 入力された数値を 4 個並べて表示する（6 が入力されたら"6666"と表示する）
 const f1 = (number1) =>{
-  console.log(`${number1}${number1}${number1}${number1}`);
+  return `${number1}${number1}${number1}${number1}`;
 }
 //   2. 入力された数値を 10 倍にして表示する
 const f2 = (number2) =>{
-  console.log(number2*10);
+  return number2*10;
 }
 //   3. 入力された数値の回数だけ`hoge`と表示する
 const f3 = (number3) =>{
   for(i=0;i<number3;i++){
-    console.log("hoge");
+    return "hoge";
   }
 }
 //   4. 入力された数値にかかわらず 0 を表示する
 const f4 = (number4) =>{
-  console.log("0");
+  return 0;
 }
 // -`functionArray` という名前の配列にf0～f4の関数を格納せよ
 // - for文を用いて、functionArrayに格納されたf0からf4までの関数を順に実行せよ。ただし各関数に渡す引数は添字のiとする。
