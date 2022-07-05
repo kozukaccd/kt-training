@@ -1,7 +1,51 @@
-// 1. 空の配列`userAgeArray`を作成し、その中にランダムな数値を for 文と Array.push を利用して 1000 個格納してください。ランダムな数値は
+//配列操作の会（破壊的メソッド）
+// - Array.push - 配列の最後に要素を追加する。他にもいろいろあるので調べてね。
+
+// const arr = [1, 2, 3];
+// arr.push(4);
+// console.log(arr);
+
+//配列内の要素を使ってなにかする会（非破壊的メソッド）
+// - Array.forEach　//何もリターンしない、ただ、配列内の要素を使って与えられた関数を実行するだけ
+// - Array.find //return trueが帰った時に、その時の要素をひとつ返す
+// - Array.filter // findの複数の戻り値を配列にして返す
+// - Array.map //returnされたものを配列にして戻す。Arrayを基に新しい配列を作りたい時に使う
+
+// const array = [4, 7, 9, 1, 5, 7, 3, 8, 0, 1, 9, 6, 0];
+// console.log("===========================================");
+
+// array.forEach((item, index) => {
+//   console.log(item);
+// });
+// console.log("===========================================");
+// console.log(
+//   array.find((item) => {
+//     return item >= 8;
+//   })
+// );
+// console.log("===========================================");
+// console.log(
+//   array.filter((item) => {
+//     return item % 2 === 0;
+//   })
+// );
+// console.log("===========================================");
+// console.log(
+//   array.map((item) => {
+//     const itemObject = { age: item };
+//     return itemObject;
+//   })
+// );
+// =========================================================================================================
+
+// 1. 空の配列`userAgeArray`を作成し、その中にランダムな数値を for 文と Array.push を利用して 1000 個格納してください。
 // - ただし、ランダムな数値は`const randomAge = Math.floor(Math.random() * 100);`を利用して作成すること
 const userAgeArray = [];
-const randomAge = Math.floor(Math.random() * 100);
+for (i = 0; i < 1000; i++) {
+  const randomAge = Math.floor(Math.random() * 100);
+  userAgeArray.push(randomAge);
+}
+console.log(userAgeArray);
 
 // 2. 1.で作成したプログラムを拡張する。空の配列の名前を`userDataArray`とし、
 // そこに格納するものをランダムな数値ではなく
@@ -13,6 +57,8 @@ const randomId = Math.random().toString(36).slice(-8);
 const randomSex = Math.floor(Math.random() * 2) % 2 === 0 ? "male" : "female";
 
 // 3. 2. で定義した userDataArray に対して Array.forEach メソッドを利用し、`ユーザID:xxxxxxxx 年齢：xx 性別:male`のような一行で表される書式ですべてのデータを`console.log()`で表示せよ。
+//`ユーザID:abcdefg 年齢：14 性別:male`
+//.....
 
 // 4. 2. で定義した userDataArray に対して Array.find メソッドを利用し、年齢が 13 以上 16 未満、かつ男性のユーザを一名抽出し、表示せよ
 
