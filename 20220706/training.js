@@ -45,7 +45,7 @@ for (i = 0; i < 1000; i++) {
   const randomAge = Math.floor(Math.random() * 100);
   userAgeArray.push(randomAge);
 }
-console.log(userAgeArray);
+//console.log(userAgeArray);
 
 // 2. 1.で作成したプログラムを拡張する。空の配列の名前を`userDataArray`とし、
 // そこに格納するものをランダムな数値ではなく
@@ -53,15 +53,46 @@ console.log(userAgeArray);
 // ただしランダムな文字列は`const randomId = Math.random().toString(36).slice(-8)`で、
 // ランダムな性別は`const randomSex = Math.floor(Math.random() * 2)%2===0?"male":"female"`で定義すること。
 const userDataArray = [];
-const randomId = Math.random().toString(36).slice(-8);
-const randomSex = Math.floor(Math.random() * 2) % 2 === 0 ? "male" : "female";
-
+for(i=0;i<30;i++){
+  const randomId = Math.random().toString(36).slice(-8);
+  const randomAge = Math.floor(Math.random() * 100);
+  const randomSex = Math.floor(Math.random() * 2) % 2 === 0 ? "male" : "female";
+  userDataArray.push({id:randomId,age:randomAge,sex:randomSex});
+}
 // 3. 2. で定義した userDataArray に対して Array.forEach メソッドを利用し、`ユーザID:xxxxxxxx 年齢：xx 性別:male`のような一行で表される書式ですべてのデータを`console.log()`で表示せよ。
 //`ユーザID:abcdefg 年齢：14 性別:male`
 //.....
+//userDataArray.forEach((data)=>{
+//  console.log(`ユーザーID:${data.id} 年齢:${data.age} 性別:${data.sex}`);
+//})
 
 // 4. 2. で定義した userDataArray に対して Array.find メソッドを利用し、年齢が 13 以上 16 未満、かつ男性のユーザを一名抽出し、表示せよ
-
+console.log(
+userDataArray.find((data)=>{
+  if(data.age >= 13 && data.age < 16){
+    return data.sex == "male" ;
+  }
+}))
 // 5. 2. で定義した userDataArray に対して Array.filter メソッドを利用し、、年齢が 10 以上 16 未満、かつ男性のユーザをすべて抽出した配列を`shotaArray`として定義し、3. で定義した書式で表示せよ
+const shotaArray = userDataArray.filter((data)=>{
+  if(data.age >= 10 && data.age < 16){
+    return data.sex == "male" ;
+  }
+});
+
+shotaArray.forEach((data)=>{
+  console.log(`ユーザーID:${data.id} 年齢:${data.age} 性別:${data.sex}`);
+})
 
 // 6. 2. で定義した userDataArray に対して Array.map メソッドを利用し、追加で`species:ランダムな犬or猫`の情報を追加せよ。ただしランダムな犬 or 猫の部分は`ランダムな性別`の定義方法を参考に、自身で実装せよ。
+
+console.log(
+userDataArray.map((data)=>{
+  const randomSpecies = Math.floor(Math.random() * 2) % 2 === 0 ? "cat" : "dog";
+  const pushSpecies = {id:data.id,age:data.age,sex:data.sex,species:randomSpecies};
+  return pushSpecies;
+})
+);
+
+//console.log(userDataArray.find((data)=>{return data.species == "dog";}));
+//console.log(userDataArray);

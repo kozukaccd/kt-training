@@ -99,8 +99,9 @@ const f2 = (number2) =>{
 //   3. 入力された数値の回数だけ`hoge`と表示する
 const f3 = (number3) =>{
   for(i=0;i<number3;i++){
-    return "hoge";
+    
   }
+  return ;
 }
 //   4. 入力された数値にかかわらず 0 を表示する
 const f4 = (number4) =>{
