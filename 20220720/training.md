@@ -8,7 +8,14 @@ Document Object Model のこと。プログラムから html を操作するた�
 
 ```javascript
 document.getElementById("id"); //id名からHtmlElementを取得
-document.getElementsByClass("class-name"); //class名からHtmlCollectionを取得（配列ではないので注意）
+document.getElementsByClassName("class-name"); //class名からHtmlCollectionを取得（配列ではないので注意）
+
 Array.from(HtmlCollection); //HtmlCollectionでforEach等のArrayクラスメソッドを利用する方法
-HtmlElement.classList.add("class-namme"); //HtmlElementにclass-nameのクラスを追加
+HtmlElement.classList.add("class-name"); //HtmlElementにclass-nameのクラスを追加
+
+EventTarget.addEventListener("typename", listener);
 ```
+
+## 課題
+
+なんかおもしろいことやって

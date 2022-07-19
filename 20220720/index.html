@@ -6,16 +6,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
   </head>
-  <body>
+  <body id="hello">
     <main>
       <h1>すきなどうぶつ</h1>
       <button id="animal-button">push</button>
       <ul id="foo">
-        <li>ねこ</li>
-        <li>いぬ</li>
-        <li>とり</li>
+        <li class="list-member">ねこ</li>
+        <li class="list-member">いぬ</li>
+        <li class="list-member">とり</li>
       </ul>
     </main>
   </body>
   <script type="text/javascript" src="./training.js"></script>
+  <style>
+    .list-member {
+      color: purple;
+    }
+    .animal-name {
+      font-size: 2rem;
+    }
+  </style>
 </html>
